@@ -1,17 +1,11 @@
 def solution(A):
     """
-    10  5 25 3 20  5  17  25  7
+    2  3  1  5  8  1  10
     """
-    n, i, ans = len(A), 0, 0
-    
-    if n < 2: return ans
-
+    ans, n, i = 0, len(A), 0
     for j in range(1, n):
-        diff = A[j] - A[i]
-        if diff >= 0:
-            ans = max(ans, diff)
-        
-        else:
+        if A[j] < A[i]:
             i = j
-    
+        else:
+            ans = max(ans, A[j] - A[i])
     return ans

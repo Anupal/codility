@@ -17,3 +17,23 @@
 3. Failure return values like -1
 4. Return -1 for values larger than threshold
 5. Check Loop bounds (0 -> n) or (1 -> n + 1)
+
+## Nice Algos
+### Kadanes algo
+#### maximum sub-array (empty sub-array not permitted)
+```python
+def max_subarray(numbers):
+    """Find the largest sum of any contiguous subarray."""
+    best_sum = - infinity
+    current_sum = 0
+    for x in numbers:
+        current_sum = max(x, current_sum + x)
+        best_sum = max(best_sum, current_sum)
+    return best_sum
+```
+
+#### maximum sub-array (empty sub-array permitted)
+```python
+best_sum = 0;
+current_sum = max(0, current_sum + x)
+```
