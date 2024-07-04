@@ -7,6 +7,9 @@
 - prefix sum
     - rolling sum
     - next occurence
+- patterns within sublists
+- stacks to store behavior in order
+- the count of most frequent element will always be > n / 2
 
 ### Edge cases
 1. Empty arrays
