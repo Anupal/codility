@@ -37,3 +37,8 @@ def max_subarray(numbers):
 best_sum = 0;
 current_sum = max(0, current_sum + x)
 ```
+
+### Binary Search
+- Usual implementation gives the index of the target in the array.
+- If not found, the index points to the smallest number larger than target in the array.
+- If you need largest number smaller than target, just decrement i. If i is 0 then such a number doesn not exist.
